@@ -13,3 +13,9 @@ Three DUD-E target labels (ADA, AMPC and COMT), 24 ligands per target-scenario
 (six labelled actives and 18 decoys), and three fixed Vina seeds were used in
 the documented pilot. Original source archives, prepared structures, poses, raw
 logs and local score tables are not redistributed here.
+
+## Evidence report
+
+The complete, evidence-bounded methodology, retrospective summaries, source
+verification, structural-preparation decision log, and current execution state
+are available in [reports/EVIDENCE-STATUS.md](reports/EVIDENCE-STATUS.md).

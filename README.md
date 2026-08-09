@@ -19,3 +19,9 @@ logs and local score tables are not redistributed here.
 The complete, evidence-bounded methodology, retrospective summaries, source
 verification, structural-preparation decision log, and current execution state
 are available in [reports/EVIDENCE-STATUS.md](reports/EVIDENCE-STATUS.md).
+
+## Versioned evidence record
+
+Release notes are maintained in [NEWS.md](NEWS.md). Version 0.1.1 adds the
+visual evidence report and the documented AMPC implementation checks; it does
+not add new docking outcomes.

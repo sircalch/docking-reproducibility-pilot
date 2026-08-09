@@ -1,0 +1,33 @@
+protocol_id: tier2-ampc-v1
+status: prespecified_not_executed
+target:
+  id: AMPC
+  source_archive: external-data/ampc.tar.gz
+  source_sha256: 886B31A35FA5D1E68051F543853A7C43FEA14127B7C35EB8D626E4874BBA3763
+  receptor: ampc/receptor.pdb
+  reference_ligand: ampc/crystal_ligand.mol2
+software:
+  vina_version: 1.2.7
+  vina_sha256: E0C4B2715E0C1A74F6E92D0F3BE0328AC97542EAFBC111E6B1EFAD897A73CCE5
+  meeko_version: 0.7.1
+  rdkit_version: 2026.03.5
+preparation:
+  flexible_sidechains: false
+  box_rule: reference_ligand_extrema_plus_5_angstrom_margin
+docking:
+  scoring: vina
+  exhaustiveness: 8
+  num_modes: 1
+  energy_range_kcal_per_mol: 3
+  cpu: 1
+  seeds: [1001, 2002, 3003]
+execution_order:
+  - verify_source_manifest
+  - extract_and_inventory
+  - prepare_receptor
+  - prepare_reference_ligand
+  - calculate_and_record_box
+  - run_reference_ligand_smoke_test
+  - prespecify_candidate_selection
+  - run_candidates
+  - assemble_checksums_and_score_table

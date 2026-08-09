@@ -31,3 +31,10 @@ not add new docking outcomes.
 See [reports/REPRODUCE-REPORT.md](reports/REPRODUCE-REPORT.md). The repository
 checks that the visual evidence can be regenerated from its documented data
 contract on a clean platform.
+
+## Prepare an independent analysis rerun
+
+The repository includes a strict preflight validator for authorized,
+independently obtained normalized tables. It does not create substitute data.
+See [protocol/TIER1-INPUT-CONTRACT.md](protocol/TIER1-INPUT-CONTRACT.md) and
+[protocol/INDEPENDENT-RERUN-PLAN.md](protocol/INDEPENDENT-RERUN-PLAN.md).

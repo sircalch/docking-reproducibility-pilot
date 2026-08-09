@@ -20,15 +20,17 @@ normalized tables is Tier 1, whereas an end-to-end docking rerun is Tier 2.
 
 ## Independent execution order
 
-1. For Tier 1, run `scripts/run_tier1_analysis.R` against a new output
+1. Run `scripts/validate_tier1_inputs.R` and retain its preflight manifest.
+   The exact required schema is in [TIER1-INPUT-CONTRACT.md](TIER1-INPUT-CONTRACT.md).
+2. For Tier 1, run `scripts/run_tier1_analysis.R` against a new output
    directory, supplying the local `dockprepR` and `dockconsensusR` checkouts.
-2. Run `dockbenchmarkR/tools/run_pilot_benchmark.R` against the same inputs.
-3. For Tier 2, retain the additional source structures, settings, engine
+3. Run `dockbenchmarkR/tools/run_pilot_benchmark.R` against the same inputs.
+4. For Tier 2, retain the additional source structures, settings, engine
    version, seeds, commands, logs, and normalization procedures before running
    any docking calculation.
-4. Record R version, package release commit, operating system, input manifest
+5. Record R version, package release commit, operating system, input manifest
    and output checksums.
-5. Compare aggregate outputs against `results/PILOT-RESULTS.md` without
+6. Compare aggregate outputs against `results/PILOT-RESULTS.md` without
    overwriting the original report.
 
 ## Acceptance criteria

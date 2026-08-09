@@ -18,8 +18,10 @@ jobs:
         run: Rscript reports/render_figures.R "$RUNNER_TEMP/evidence-figures"
       - name: Verify evidence references
         run: |
+          Rscript scripts/validate_tier1_inputs.R --help
           test -f reports/EVIDENCE-STATUS.md
           test -f manuscript/SUPPLEMENTARY-EVIDENCE-NOTE.md
+          test -f protocol/TIER1-INPUT-CONTRACT.md
           test -f reports/figures/figure-1-evidence-pathway.svg
           test -f reports/figures/figure-2-retrospective-metrics.svg
           test -f reports/figures/figure-3-top5-enrichment.svg

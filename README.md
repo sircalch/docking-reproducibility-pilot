@@ -25,3 +25,8 @@ are available in [reports/EVIDENCE-STATUS.md](reports/EVIDENCE-STATUS.md).
 Release notes are maintained in [NEWS.md](NEWS.md). Version 0.1.1 adds the
 visual evidence report and the documented AMPC implementation checks; it does
 not add new docking outcomes.
+
+## Reproduce visual materials
+
+See [reports/REPRODUCE-REPORT.md](reports/REPRODUCE-REPORT.md). The repository
+checks that committed evidence figures regenerate unchanged.

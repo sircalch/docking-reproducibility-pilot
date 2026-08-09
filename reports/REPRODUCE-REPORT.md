@@ -17,13 +17,19 @@ The command writes:
 - `reports/figures/figure-2-retrospective-metrics.svg`
 - `reports/figures/figure-3-top5-enrichment.svg`
 
-Then confirm that the committed figures are current:
+For a portable verification (the approach used in CI), render to an empty
+temporary directory and confirm that the three SVG files are non-empty:
 
-```sh
-git diff --exit-code -- reports/figures
+```r
+Rscript reports/render_figures.R path/to/temporary/evidence-figures
 ```
 
-The `Evidence check` workflow runs these two steps on GitHub. The Python
+The committed SVGs are versioned display artifacts. Their bytes can differ
+between operating systems because R's SVG device encodes local font glyphs;
+therefore byte-for-byte comparison is not a valid cross-platform scientific
+check. The renderer instead validates the complete 3-by-4 target/metric data
+contract before producing the three figures. The `Evidence check` workflow
+runs this portable rendering check on GitHub. The Python
 structural-selection and repair scripts are compiled for syntax only; they are
 not run in CI because they depend on deliberately untracked external source
 files and isolated local scientific tools.

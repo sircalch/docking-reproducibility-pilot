@@ -2,7 +2,11 @@
 # Values below are copied from results/PILOT-RESULTS.md; no new analysis is
 # performed by this rendering script.
 
-output_dir <- file.path("reports", "figures")
+arguments <- commandArgs(trailingOnly = TRUE)
+if (length(arguments) > 1L) {
+  stop("Use at most one optional output directory argument.", call. = FALSE)
+}
+output_dir <- if (length(arguments) == 1L) arguments[[1L]] else file.path("reports", "figures")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 draw_box <- function(x0, y0, label, fill, border = "#334155") {
@@ -31,6 +35,20 @@ metric_ranges <- utils::read.csv(
   file.path("results", "PILOT-METRIC-RANGES.csv"),
   stringsAsFactors = FALSE
 )
+expected_targets <- c("ADA", "AMPC", "COMT")
+expected_metrics <- c("rank_agreement", "roc_auc", "average_precision", "top5_enrichment")
+expected_keys <- as.vector(outer(expected_targets, expected_metrics, paste, sep = "::"))
+observed_keys <- paste(metric_ranges$target, metric_ranges$metric, sep = "::")
+if (
+  nrow(metric_ranges) != length(expected_keys) ||
+  !setequal(observed_keys, expected_keys) ||
+  anyDuplicated(observed_keys) ||
+  any(!is.finite(metric_ranges$minimum)) ||
+  any(!is.finite(metric_ranges$maximum)) ||
+  any(metric_ranges$minimum > metric_ranges$maximum)
+) {
+  stop("PILOT-METRIC-RANGES.csv does not satisfy the documented target/metric contract.", call. = FALSE)
+}
 target <- c("ADA", "AMPC", "COMT")
 metric_vector <- function(metric, column) {
   data <- metric_ranges[metric_ranges$metric == metric, , drop = FALSE]

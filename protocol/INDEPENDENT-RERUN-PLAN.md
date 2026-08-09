@@ -5,11 +5,14 @@
 **Not executed in this repository.** The original DUD-E archives, prepared
 structures, docking artifacts, logs and derived score tables are intentionally
 not redistributed here. An independent rerun may proceed only when an analyst
-has lawful access to the required inputs.
+has lawful access to the required inputs. See
+[REPRODUCIBILITY-TIERS.md](REPRODUCIBILITY-TIERS.md): an analysis rerun from
+normalized tables is Tier 1, whereas an end-to-end docking rerun is Tier 2.
 
 ## Required inputs
 
-1. Three local directories: `dude-ada`, `dude-ampc`, and `dude-comt`.
+1. For Tier 1, three local directories: `dude-ada`, `dude-ampc`, and
+   `dude-comt`.
 2. Each directory must contain `pilot_runs_normalized.csv` with 24 ligands and
    three declared seed scenarios (1001, 2002 and 3003).
 3. The label source and retrieval conditions must be recorded.
@@ -17,11 +20,12 @@ has lawful access to the required inputs.
 
 ## Independent execution order
 
-1. Run `dockprepR/tools/audit_multitarget_pilot.R` against a new output
-   directory.
-2. Run `dockconsensusR/tools/run_multitarget_consensus.R` against the same
-   derived-data directory.
-3. Run `dockbenchmarkR/tools/run_pilot_benchmark.R` against the same inputs.
+1. For Tier 1, run `scripts/run_tier1_analysis.R` against a new output
+   directory, supplying the local `dockprepR` and `dockconsensusR` checkouts.
+2. Run `dockbenchmarkR/tools/run_pilot_benchmark.R` against the same inputs.
+3. For Tier 2, retain the additional source structures, settings, engine
+   version, seeds, commands, logs, and normalization procedures before running
+   any docking calculation.
 4. Record R version, package release commit, operating system, input manifest
    and output checksums.
 5. Compare aggregate outputs against `results/PILOT-RESULTS.md` without

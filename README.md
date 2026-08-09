@@ -22,11 +22,12 @@ are available in [reports/EVIDENCE-STATUS.md](reports/EVIDENCE-STATUS.md).
 
 ## Versioned evidence record
 
-Release notes are maintained in [NEWS.md](NEWS.md). Version 0.1.1 adds the
-visual evidence report and the documented AMPC implementation checks; it does
+Release notes are maintained in [NEWS.md](NEWS.md). Version 0.1.2 adds a
+cross-platform evidence-figure check and a data-contract validation; it does
 not add new docking outcomes.
 
 ## Reproduce visual materials
 
 See [reports/REPRODUCE-REPORT.md](reports/REPRODUCE-REPORT.md). The repository
-checks that committed evidence figures regenerate unchanged.
+checks that the visual evidence can be regenerated from its documented data
+contract on a clean platform.

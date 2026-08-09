@@ -43,3 +43,7 @@ compatibility.
 The repaired model is computationally completed, not an experimental structure.
 It must be described as such in any future report and retained separately from
 the RCSB coordinate record.
+
+The current repair failed its Meeko acceptance check and is not accepted for
+docking; see
+[DEVIATION-004-RCSB-1L2S-REPAIR-VALIDATION.md](DEVIATION-004-RCSB-1L2S-REPAIR-VALIDATION.md).

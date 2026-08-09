@@ -1,0 +1,15 @@
+# Small multiblanco docking reproducibility pilot
+
+This is a transparent retrospective pilot assembled from the documented local
+outputs of the companion `dockbenchmarkR`, `dockprepR`, and `dockconsensusR`
+repositories. It describes integrity, rank agreement and retrospective label
+separation for precomputed score tables. It is not a prospective virtual screen
+and does not establish molecular binding, biological activity, efficacy, safety,
+or clinical utility.
+
+## Scope
+
+Three DUD-E target labels (ADA, AMPC and COMT), 24 ligands per target-scenario
+(six labelled actives and 18 decoys), and three fixed Vina seeds were used in
+the documented pilot. Original source archives, prepared structures, poses, raw
+logs and local score tables are not redistributed here.

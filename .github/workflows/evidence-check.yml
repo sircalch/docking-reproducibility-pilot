@@ -39,4 +39,4 @@ jobs:
         with:
           python-version: '3.13'
       - name: Compile methodological scripts without executing data processing
-        run: python -m py_compile scripts/extract_rcsb_1l2s_chain_a.py scripts/repair_missing_heavy_atoms.py
+        run: python -m py_compile scripts/extract_rcsb_1l2s_chain_a.py scripts/repair_missing_heavy_atoms.py scripts/select_rcsb_protein_chain.py

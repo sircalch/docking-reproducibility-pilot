@@ -38,3 +38,10 @@ The repository includes a strict preflight validator for authorized,
 independently obtained normalized tables. It does not create substitute data.
 See [protocol/TIER1-INPUT-CONTRACT.md](protocol/TIER1-INPUT-CONTRACT.md) and
 [protocol/INDEPENDENT-RERUN-PLAN.md](protocol/INDEPENDENT-RERUN-PLAN.md).
+
+## Separate exploratory receptor qualification
+
+The prespecified 4KG2 receptor-qualification campaign is a new exploratory
+method study, not a continuation of the retrospective pilot. Its scope and
+strict stop conditions are in
+[protocol/TIER2-AMPC-4KG2-QUALIFICATION.md](protocol/TIER2-AMPC-4KG2-QUALIFICATION.md).

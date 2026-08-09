@@ -34,7 +34,10 @@ reported by this document.
 1. Retain the downloaded source archive unchanged. Extracted and prepared
    artifacts are separate, local, and checksummed.
 2. Use the supplied receptor without flexible side chains in the initial unit.
-   The receptor-preparation command and complete log must be retained.
+   Read it through Meeko's documented ProDy input path; the receptor file is
+   not edited. The receptor-preparation command and complete log must be
+   retained. The reason for this parser choice is recorded in
+   [DEVIATION-001-AMPC-RECEPTOR-PARSING.md](DEVIATION-001-AMPC-RECEPTOR-PARSING.md).
 3. Prepare the crystallographic ligand first. Its heavy-atom coordinates define
    a proposed docking box only after an explicit coordinate calculation is
    written to the run manifest.
@@ -63,6 +66,9 @@ the receptor or reference ligand cannot be parameterized, a candidate cannot be
 processed, or the box cannot be derived without discretionary changes. Do not
 silently replace structures, alter identifiers, or tune parameters after
 observing scores.
+
+The current implementation is stopped under
+[DEVIATION-002-AMPC-STRUCTURE-COMPATIBILITY.md](DEVIATION-002-AMPC-STRUCTURE-COMPATIBILITY.md).
 
 ## Interpretation boundary
 

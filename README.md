@@ -22,8 +22,8 @@ are available in [reports/EVIDENCE-STATUS.md](reports/EVIDENCE-STATUS.md).
 
 ## Versioned evidence record
 
-Release notes are maintained in [NEWS.md](NEWS.md). Version 0.1.2 adds a
-cross-platform evidence-figure check and a data-contract validation; it does
+Release notes are maintained in [NEWS.md](NEWS.md). Version 0.1.3 adds a
+tested preflight contract for authorized independent analysis inputs; it does
 not add new docking outcomes.
 
 ## Reproduce visual materials

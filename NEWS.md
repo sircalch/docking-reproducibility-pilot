@@ -1,3 +1,10 @@
+# docking-reproducibility-pilot 0.1.3
+
+- Add a documented, executable Tier 1 preflight contract and a synthetic
+  regression check for valid and duplicate ligand/scenario inputs.
+- Do not add new docking poses, scores, rankings, performance estimates, or
+  biological claims.
+
 # docking-reproducibility-pilot 0.1.2
 
 - Validate the complete documented 3-target by 4-metric visual-data contract

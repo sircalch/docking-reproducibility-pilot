@@ -12,6 +12,8 @@ results.
 
 ## Visual evidence pathway
 
+![Figure 1. Evidence pathway and current execution boundary.](figures/figure-1-evidence-pathway.svg)
+
 ```mermaid
 flowchart LR
     A["DUD-E source archives\nADA · AMPC · COMT\nverified locally"] --> B["Source inventory\ncounts and SHA-256 recorded"]
@@ -24,6 +26,8 @@ flowchart LR
 ```
 
 ## Documented retrospective pilot results
+
+![Figure 2. Documented rank-agreement, ROC-AUC and average-precision ranges across three fixed seeds.](figures/figure-2-retrospective-metrics.svg)
 
 These figures originate from the already documented local pilot tables; their
 raw tables are not redistributed in this repository.
@@ -47,6 +51,8 @@ target-specific and retrospective.
 | AMPC archive | 48 active records; 2,850 decoy records | SHA-256 `886B31A35FA5D1E68051F543853A7C43FEA14127B7C35EB8D626E4874BBA3763` |
 | COMT archive | 41 active records; 3,850 decoy records | SHA-256 `545F5778D007536741CD05D2F8C855318588C3956AC8A55F1559DB031D3709FD` |
 | Docking environment | Vina 1.2.7; Meeko 0.7.1; RDKit 2026.03.5; ProDy 2.6.1; PDBFixer 1.12.0 | Local manifests under ignored `external-tools/` |
+
+![Figure 3. Documented target-specific top-5 enrichment factors.](figures/figure-3-top5-enrichment.svg)
 
 ## AMPC Tier 2 procedure and outcome
 

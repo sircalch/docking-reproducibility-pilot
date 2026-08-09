@@ -28,6 +28,8 @@ jobs:
           test -s "$RUNNER_TEMP/evidence-figures/figure-1-evidence-pathway.svg"
           test -s "$RUNNER_TEMP/evidence-figures/figure-2-retrospective-metrics.svg"
           test -s "$RUNNER_TEMP/evidence-figures/figure-3-top5-enrichment.svg"
+      - name: Test the Tier 1 input preflight contract
+        run: Rscript tests/test_tier1_preflight.R
 
   validate-method-scripts:
     runs-on: ubuntu-latest

@@ -2,3 +2,4 @@ external-data/
 external-tools/
 derived-data/
 rerun-output/
+__pycache__/

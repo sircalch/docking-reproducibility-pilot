@@ -1,0 +1,13 @@
+target,metric,minimum,maximum,unit,interpretation
+ADA,rank_agreement,0.970,0.982,Spearman_rho,Pairwise seed rank agreement
+AMPC,rank_agreement,0.985,0.998,Spearman_rho,Pairwise seed rank agreement
+COMT,rank_agreement,0.930,0.975,Spearman_rho,Pairwise seed rank agreement
+ADA,roc_auc,0.343,0.380,AUC,Retrospective label separation
+AMPC,roc_auc,0.528,0.565,AUC,Retrospective label separation
+COMT,roc_auc,0.769,0.796,AUC,Retrospective label separation
+ADA,average_precision,0.239,0.368,average_precision,Retrospective label separation
+AMPC,average_precision,0.276,0.293,average_precision,Retrospective label separation
+COMT,average_precision,0.476,0.569,average_precision,Retrospective label separation
+ADA,top5_enrichment,0.8,0.8,enrichment_factor,Retrospective top-5 enrichment
+AMPC,top5_enrichment,0.0,0.0,enrichment_factor,Retrospective top-5 enrichment
+COMT,top5_enrichment,1.6,1.6,enrichment_factor,Retrospective top-5 enrichment

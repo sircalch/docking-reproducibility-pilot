@@ -27,14 +27,26 @@ draw_box(5.05, 0.65, "Stopped before PDBQT\nNo poses, scores, ranks\nor biologic
 text(0.35, 0.2, "Blue: documented evidence  ·  Amber: structural work  ·  Red: validated stop", adj = 0, cex = 0.78)
 dev.off()
 
+metric_ranges <- utils::read.csv(
+  file.path("results", "PILOT-METRIC-RANGES.csv"),
+  stringsAsFactors = FALSE
+)
 target <- c("ADA", "AMPC", "COMT")
-spearman_low <- c(0.970, 0.985, 0.930)
-spearman_high <- c(0.982, 0.998, 0.975)
-auc_low <- c(0.343, 0.528, 0.769)
-auc_high <- c(0.380, 0.565, 0.796)
-ap_low <- c(0.239, 0.276, 0.476)
-ap_high <- c(0.368, 0.293, 0.569)
-ef5 <- c(0.8, 0.0, 1.6)
+metric_vector <- function(metric, column) {
+  data <- metric_ranges[metric_ranges$metric == metric, , drop = FALSE]
+  data <- data[match(target, data$target), , drop = FALSE]
+  if (anyNA(data[[column]]) || !identical(data$target, target)) {
+    stop("Metric ranges do not contain complete target-specific values for ", metric, call. = FALSE)
+  }
+  data[[column]]
+}
+spearman_low <- metric_vector("rank_agreement", "minimum")
+spearman_high <- metric_vector("rank_agreement", "maximum")
+auc_low <- metric_vector("roc_auc", "minimum")
+auc_high <- metric_vector("roc_auc", "maximum")
+ap_low <- metric_vector("average_precision", "minimum")
+ap_high <- metric_vector("average_precision", "maximum")
+ef5 <- metric_vector("top5_enrichment", "minimum")
 
 draw_range_panel <- function(low, high, main, ylim = c(0, 1), reference = NULL) {
   x <- seq_along(target)

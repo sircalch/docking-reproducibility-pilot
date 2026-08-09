@@ -1,7 +1,8 @@
 # Reproduce the visual evidence report
 
-The figures in this repository are generated from the documented values in
-`results/PILOT-RESULTS.md` and from the evidence-state record. They do not
+The figures in this repository are generated from the documented ranges in
+`results/PILOT-METRIC-RANGES.csv`, which transcribes the results record in
+`results/PILOT-RESULTS.md`, and from the evidence-state record. They do not
 download data, prepare structures, run docking engines, or generate new scores.
 
 From the repository root, run:

@@ -63,6 +63,7 @@ target-specific and retrospective.
 | Chain-A selection | 2,737 protein atom records; 19 STC reference-ligand records | Selection completed | Chain A protein and STC 1115 were separated with source/output checksums. |
 | Missing-heavy-atom repair | Ten existing residues completed; no full residues or hydrogens added | Repair completed but rejected | The produced model is computationally repaired, not experimental. |
 | Meeko acceptance validation | Inter-residue padding conflict for A:262/A:296 and A:264/A:282 | Stopped | No PDBQT receptor, docking pose, score, ranking or performance metric was produced. |
+| Separate 4KG2 qualification | Direct Meeko preparation rejected chain A residues A:6, A:37, A:50, A:207 and A:246; alternate locations A:14 and A:102 | Stopped | No PDBQT receptor, ligand preparation, docking pose, score, ranking or performance metric was produced. |
 
 ## Visual status matrix
 
@@ -73,6 +74,7 @@ target-specific and retrospective.
 | Retrospective analysis report | ✅ documented |
 | Tier 1 independent-analysis runner | ✅ prepared; awaits independent normalized tables |
 | AMPC receptor usable for Vina | ⛔ not accepted |
+| 4KG2 exploratory receptor usable for Vina | ⛔ not accepted |
 | Reference-ligand smoke test | ⬜ not executed |
 | Candidate docking campaign | ⬜ not executed |
 | New biological or binding claim | ⛔ not supported |

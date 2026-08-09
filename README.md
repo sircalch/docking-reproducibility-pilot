@@ -45,3 +45,5 @@ The prespecified 4KG2 receptor-qualification campaign is a new exploratory
 method study, not a continuation of the retrospective pilot. Its scope and
 strict stop conditions are in
 [protocol/TIER2-AMPC-4KG2-QUALIFICATION.md](protocol/TIER2-AMPC-4KG2-QUALIFICATION.md).
+It stopped at direct receptor preparation without a PDBQT; see
+[DEVIATION-005-AMPC-4KG2-DIRECT-PREPARATION.md](protocol/DEVIATION-005-AMPC-4KG2-DIRECT-PREPARATION.md).

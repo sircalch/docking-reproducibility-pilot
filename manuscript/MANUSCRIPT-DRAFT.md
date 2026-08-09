@@ -123,6 +123,8 @@ therapeutic claims.
 The analysis protocol and aggregate results are in this repository. Companion
 software releases provide the implementation context. Third-party archives,
 prepared structures, raw logs, poses and local score tables are not redistributed.
+The visual evidence pathway, rendering script and supplementary procedural note
+are available in `reports/` and `manuscript/SUPPLEMENTARY-EVIDENCE-NOTE.md`.
 
 ## Author contributions
 
